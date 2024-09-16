@@ -1,4 +1,4 @@
-from game_logic import Game_Setting
+from game_setting import Game_Setting
 from game_player import Player
 
 class Game_Play:

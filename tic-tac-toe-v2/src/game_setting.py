@@ -4,7 +4,7 @@ class Game_Setting:
         self.board_size = self.board_width * self.board_width
         self.board = [' '] * self.board_size
         self.winning_line = winning_line
-        self.player_marks = ['X', 'O', '△']
+        self.player_marks = ['X', 'O']
 
     @property
     def winning_conditions(self):
