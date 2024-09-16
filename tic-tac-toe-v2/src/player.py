@@ -10,5 +10,3 @@ class Player:
     # TODO: get rows and column where the player wants to put symbol
     def user_input(self):
         pass
-
-

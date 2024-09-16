@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
-import game_logic as gl
+import game_play as gp
 
 app = Flask(__name__)
 
@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 BOARD_WIDTH = 3
 WINNING_LINE = 3
-game = gl.Game_Play(BOARD_WIDTH, WINNING_LINE)
+game = gp.Game_Play(BOARD_WIDTH, WINNING_LINE)
 
 
 # NOTE: you cannot use this answer in Portfolio Part 2
