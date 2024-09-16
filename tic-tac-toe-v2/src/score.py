@@ -10,7 +10,6 @@ def get_scores():
     """
     return {'Player 1': player1_score, 'Player 2': player2_score}
 
-score_updated = False
 
 def update_scores(winner):
     """
@@ -19,13 +18,12 @@ def update_scores(winner):
     winner (str): The name of the player who won ('Player 1' or 'Player 2').
     """
     global player1_score, player2_score, score_updated
-    if not score_updated:
-        if winner == 'Player 1':
-            player1_score += 1
-        elif winner == 'Player 2':
-            player2_score += 1
 
-        score_updated = True
+    if winner == 'Player 1':
+        player1_score += 1
+    elif winner == 'Player 2':
+        player2_score += 1
+
 
 
 def display_scores():
