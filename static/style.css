@@ -56,7 +56,6 @@ body {
   font-size: 1.2em;
   margin-bottom: 20px;
 }
-
 /* Styling for the scores section */
 .scores {
   font-size: 1.2em;
@@ -66,4 +65,11 @@ body {
 .scores p {
   margin: 5px 0;
   font-weight: bold;
+}
+.mark_X{
+  color: red;
+}
+
+.mark_O{
+  color: blue;
 }

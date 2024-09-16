@@ -23,8 +23,25 @@
       <!-- Tic-Tac-Toe board -->
       <div class="board">
         {% for index in range(9) %}
-        <a href="{{ url_for('play', cell=index) }}" class="cell">{{ board[index] }}</a>
+            {% if board[index] == ' ' %}
+            <a href="{{ url_for('play', cell=index) }}" class="cell">{{ board[index] }}</a>
+            {%  endif %}
+            {% if board[index] == 'X' %}
+            <a href="{{ url_for('play', cell=index) }}" class="cell">
+                <p class="mark_X">
+                {{ board[index] }}
+                </p>
+            </a>
+            {%  endif %}
+            {% if board[index] == 'O' %}
+            <a href="{{ url_for('play', cell=index) }}" class="cell">
+                <p class="mark_O">
+                    {{ board[index] }}
+                </p>
+            </a>
+            {%  endif %}
         {% endfor %}
+
       </div>
 
       <!-- Display the result or current player -->
