@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 import game_play as gp
+from score import get_scores, update_scores
 
 app = Flask(__name__)
 
@@ -30,7 +31,20 @@ def index():
     draw = game.check_draw()
     current_player = game.current_player.mark
     board = game.setting.board
-    return render_template('index.html', board=board, current_player=current_player, winner=winner, draw=draw)
+    scores = get_scores()
+
+    # update score if there is a winner
+    if winner == 'X':
+        update_scores('Player1')
+    elif winner == 'O':
+        update_scores('Player2')
+
+    return render_template('index.html',
+                           board=board,
+                           current_player=current_player,
+                           winner=winner,
+                           draw=draw,
+                           scores=scores)
 
 # @app.route('/play/<int:cell>')
 # def play(cell):
@@ -45,7 +59,6 @@ def index():
 @app.route('/play/<int:cell>')
 def play(cell):
     # breakpoint()
-
     if game.do_continue() == False:
         return redirect(url_for('index'))
 

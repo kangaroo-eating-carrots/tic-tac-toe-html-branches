@@ -1,5 +1,6 @@
 from game_logic import Game_Setting
 from game_player import Player
+from score import update_scores
 
 class Game_Play:
     def __init__(self, board_width, winning_line):
@@ -19,6 +20,7 @@ class Game_Play:
                 if choice in wc:
                     match_count += 1
             if match_count == self.winning_line:
+                update_scores('Player 1')
                 return self.player1.mark
 
             match_count = 0
@@ -26,6 +28,7 @@ class Game_Play:
                 if choice in wc:
                     match_count += 1
             if match_count == self.winning_line:
+                update_scores('Player 2')
                 return self.player2.mark
         return None
 
