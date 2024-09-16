@@ -56,3 +56,11 @@ body {
   font-size: 1.2em;
   margin-bottom: 20px;
 }
+
+.mark_X{
+  color: red;
+}
+
+.mark_O{
+  color: blue;
+}
