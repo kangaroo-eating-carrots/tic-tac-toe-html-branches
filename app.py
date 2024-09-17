@@ -31,13 +31,7 @@ def index():
     draw = game.check_draw()
     current_player = game.current_player.mark
     board = game.setting.board
-    scores = get_scores()
-
-    # update score if there is a winner
-    if winner == 'X':
-        update_scores('Player1')
-    elif winner == 'O':
-        update_scores('Player2')
+    scores = {'Player 1': game.player1.score, 'Player 2': game.player2.score}
 
     return render_template('index.html',
                            board=board,
@@ -83,6 +77,7 @@ def reset():
     game.put_counter = 0
     game.player1.choices = []
     game.player2.choices = []
+    game.is_there_winner = False
     return redirect(url_for('index'))
 
 if __name__ == '__main__':

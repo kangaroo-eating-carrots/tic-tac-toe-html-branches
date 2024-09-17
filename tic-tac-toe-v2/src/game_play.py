@@ -1,6 +1,6 @@
 from game_setting import Game_Setting
 from game_player import Player
-from score import update_scores
+from game_score import Score
 
 class Game_Play:
     def __init__(self, board_width, winning_line):
@@ -11,6 +11,7 @@ class Game_Play:
         self.player2 = Player(self.setting.player_marks[1])
         self.current_player = self.player1
         self.put_counter = 0
+        self.is_there_winner = False
 
 
     def check_winner(self):
@@ -20,7 +21,9 @@ class Game_Play:
                 if choice in wc:
                     match_count += 1
             if match_count == self.winning_line:
-                update_scores('Player 1')
+                if self.is_there_winner == False:
+                    self.player1.score += 1
+                    self.is_there_winner = True
                 return self.player1.mark
 
             match_count = 0
@@ -28,7 +31,9 @@ class Game_Play:
                 if choice in wc:
                     match_count += 1
             if match_count == self.winning_line:
-                update_scores('Player 2')
+                if self.is_there_winner == False:
+                    self.player2.score += 1
+                    self.is_there_winner = True
                 return self.player2.mark
         return None
 
@@ -37,9 +42,8 @@ class Game_Play:
 
     def do_continue(self):
         draw = self.check_draw()
-        winner = self.check_winner()
 
-        if draw or winner is not None:
+        if draw or self.is_there_winner:
             return False
 
         return True
