@@ -4,7 +4,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: Gray;
+  background-color: gray;
+  color: white;
 }
 
 .container {
@@ -27,12 +28,13 @@ body {
   background-color: #fff;
   border: 1px solid #ccc;
   font-size: 2em;
+  font-weight: bold;
   text-decoration: none;
   color: #333;
 }
 
 .cell:hover {
-  background-color: Blue;
+  background-color: black;
 }
 
 .reset-button {
