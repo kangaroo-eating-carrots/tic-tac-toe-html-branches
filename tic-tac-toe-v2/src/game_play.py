@@ -1,6 +1,5 @@
 from game_setting import Game_Setting
 from game_player import Player
-from game_score import Score
 
 class Game_Play:
     def __init__(self, board_width, winning_line):
