@@ -43,5 +43,18 @@ class Game_Play:
 
         if draw or self.is_there_winner:
             return False
-
         return True
+
+    def reset(self):
+        self.setting.board = [' '] * 9
+        self.current_player = self.player1
+        self.put_counter = 0
+        self.player1.choices = []
+        self.player2.choices = []
+        self.is_there_winner = False
+        if self.starter == self.player1:
+            self.starter = self.player2
+            self.current_player = self.player2
+        else:
+            self.starter = self.player1
+            self.current_player = self.player1
