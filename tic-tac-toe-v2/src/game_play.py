@@ -9,9 +9,8 @@ class Game_Play:
         self.player1 = Player(self.setting.player_marks[0])
         self.player2 = Player(self.setting.player_marks[1])
         self.current_player = self.player1
-        self.put_counter = 0
+        self.starter = self.player1
         self.is_there_winner = False
-
 
     def check_winner(self):
         for wc in self.setting.winning_conditions:

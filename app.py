@@ -41,6 +41,12 @@ def reset():
     game.player1.choices = []
     game.player2.choices = []
     game.is_there_winner = False
+    if game.starter == game.player1:
+        game.starter = game.player2
+        game.current_player = game.player2
+    else:
+        game.starter = game.player1
+        game.current_player = game.player1
     return redirect(url_for('index'))
 
 if __name__ == '__main__':
