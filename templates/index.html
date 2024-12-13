@@ -28,13 +28,13 @@
             {%  endif %}
             {% if board[index] == 'X' %}
                 {%  if winner or draw %}
-                    <a href="{{ url_for('play', cell=index) }}" class="cell">
+                    <a href="{{ url_for('play', cell=index) }}" class="selected-cell">
                     <p class="mark_X">
                     {{ board[index] }}
                     </p>
                     </a>
                 {% else %}
-                    <a href="{{ url_for('play', cell=index) }}" class="cell">
+                    <a href="{{ url_for('play', cell=index) }}" class="selected-cell">
                     <p>
                     {{ ' ' }}
                     </p>
@@ -43,13 +43,13 @@
             {%  endif %}
             {% if board[index] == 'O' %}
                 {%  if winner or draw %}
-                    <a href="{{ url_for('play', cell=index) }}" class="cell">
+                    <a href="{{ url_for('play', cell=index) }}" class="selected-cell">
                     <p class="mark_O">
                     {{ board[index] }}
                     </p>
                     </a>
                 {% else %}
-                    <a href="{{ url_for('play', cell=index) }}" class="cell">
+                    <a href="{{ url_for('play', cell=index) }}" class="selected-cell">
                     <p>
                     {{ ' ' }}
                     </p>

@@ -33,6 +33,20 @@ body {
   color: #333;
 }
 
+.selected-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background-color: #000;
+  border: 1px solid #ccc;
+  font-size: 2em;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
 .cell:hover {
   background-color: black;
 }
