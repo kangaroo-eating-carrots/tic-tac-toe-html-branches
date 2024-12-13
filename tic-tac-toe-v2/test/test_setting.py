@@ -1,5 +1,5 @@
 import unittest
-from src.game_setting import Game_Setting
+from game_setting import Game_Setting
 
 class TestLogic(unittest.TestCase):
     def setUp(self):

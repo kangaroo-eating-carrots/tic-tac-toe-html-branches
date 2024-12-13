@@ -1,3 +1,8 @@
+import sys
+import os
+
+sys.path.append(os.path.join(os.path.dirname(__file__), 'tic-tac-toe-v2', 'src'))
+
 from flask import Flask, render_template, request, redirect, url_for
 import game_play as gp
 
