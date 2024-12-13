@@ -1,10 +1,13 @@
 # Tic Tac Toe Flask Application
 
 A simple Tic Tac Toe game built with Python and Flask. This application allows two players to play Tic Tac Toe in a web browser.
+Originally forked from NM-Tafe Group Activity, and then Updated by Jeonghyun Min
 
 ## Features
 
 - Two-player Tic Tac Toe game
+- Branch > main: normal tic tae toe game
+- Branch > blind: blind tic tae toe game in which players cannot see their marks until the game end
 - Simple web interface
 - Option to reset the game
 
@@ -30,12 +33,17 @@ A simple Tic Tac Toe game built with Python and Flask. This application allows t
    pip install -r requirements.txt
    ```
 
-3. **Run the application:**
+3. **(Optional) Change to blind branch**
+   ```bash
+   git checkout blind
+   ```
+   
+4. **Run the application:**
 
    ```bash
    python app.py
    ```
-
-4. **Open your web browser:**
+   
+5. **Open your web browser:**
 
    Go to `http://127.0.0.1:5000` to play the game.
