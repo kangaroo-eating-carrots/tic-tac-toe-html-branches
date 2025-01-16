@@ -10,6 +10,25 @@ Originally forked from NM-Tafe Group Activity, and then Updated by Jeonghyun Min
 - Branch > blind: blind tic tae toe game in which players cannot see their marks until the game end
 - Simple web interface
 - Option to reset the game
+<br><br>
+
+## Game Examples
+### 1-1. Normal Tic-tac-toe ( Playing )
+<img src="./WorkingExamples/01_normal_playing.png" alt="normal Tic-tac-toe playing" width="400">
+<br>
+
+### 1-2. Normal Tic-tac-toe ( Result )
+<img src="./WorkingExamples/01_normal_result.png" alt="normal Tic-tac-toe result" width="400">
+<br>
+
+### 2-1. Blind Tic-tac-toe ( Playing )
+<img src="./WorkingExamples/02_blind_playing.png" alt="blind Tic-tac-toe playing" width="400">
+<br>
+
+### 2-2. Blind Tic-tac-toe ( Result )
+<img src="./WorkingExamples/02_blind_result.png" alt="blind Tic-tac-toe result" width="400">
+<br><br>
+
 
 ## Getting Started
 
